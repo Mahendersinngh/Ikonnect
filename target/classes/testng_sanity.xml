@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="KonnectPortal Application">
+
+	<listeners>
+		<listener class-name="com.konnect.ExtentReportListener.ExtentReporterNG" />
+	</listeners>
+
+	<test name="Konnect Poprtal Test Cases">
+		<classes>
+			<class name="com.konnect.testcases.LoginPageTest"></class>
+			<class name="com.konnect.testcases.HomePageTest"></class>
+			<!-- <class name="com.konnect.testcases."></class> -->
+
+		</classes>
+	</test>
+</suite>
