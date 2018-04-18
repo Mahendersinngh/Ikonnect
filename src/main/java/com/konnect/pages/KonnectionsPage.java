@@ -21,7 +21,7 @@ public class KonnectionsPage extends TestBase {
 
 	
 	
-	// For Logout from Groups
+	//  Tset For Logout from Groups
     @FindBy(xpath="//img[@id='imgusrProfileDP']")
     WebElement profileicon;
     // Logout button
