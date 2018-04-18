@@ -132,6 +132,16 @@ public class WebEventListener extends TestBase implements WebDriverEventListener
 		// TODO Auto-generated method stub
 
 	}
+
+	public void afterSwitchToWindow(String arg0, WebDriver arg1) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void beforeSwitchToWindow(String arg0, WebDriver arg1) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 	

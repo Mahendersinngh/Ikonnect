@@ -10,7 +10,7 @@
 		<classes>
 			<class name="com.konnect.testcases.LoginPageTest"></class>
 			<class name="com.konnect.testcases.HomePageTest"></class>
-			<!-- <class name="com.konnect.testcases."></class> -->
+			<!-- <class name="com.konnect.testcases.GroupsPageTest"></class> -->
 
 		</classes>
 	</test>

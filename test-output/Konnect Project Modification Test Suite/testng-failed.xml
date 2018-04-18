@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [Konnect Project Modification Test Suite]" guice-stage="DEVELOPMENT" allow-return-values="true" verbose="10">
+  <listeners>
+    <listener class-name="com.konnect.ExtentReportListener.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="1" name="Groups Creation(failed)" verbose="10">
+    <classes>
+      <class name="com.konnect.testcases.GroupsPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="validateCreatedNewGroup" invocation-numbers="0"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.konnect.testcases.GroupsPageTest -->
+    </classes>
+  </test> <!-- Groups Creation(failed) -->
+</suite> <!-- Failed suite [Konnect Project Modification Test Suite] -->

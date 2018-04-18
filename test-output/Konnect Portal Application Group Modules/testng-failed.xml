@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="6" name="Failed suite [Konnect Portal Application Group Modules]" guice-stage="DEVELOPMENT" allow-return-values="true" verbose="2">
+  <listeners>
+    <listener class-name="com.konnect.ExtentReportListener.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="6" name="Update Project ProjectTab, NotesTab, LinkTab TestCases(failed)" verbose="2">
+    <classes>
+      <class name="com.konnect.testcases.UpdateProjectPageTabTest">
+        <methods>
+          <include name="setup"/>
+          <include name="SetCalendarExpiryDate"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.konnect.testcases.UpdateProjectPageTabTest -->
+    </classes>
+  </test> <!-- Update Project ProjectTab, NotesTab, LinkTab TestCases(failed) -->
+</suite> <!-- Failed suite [Konnect Portal Application Group Modules] -->

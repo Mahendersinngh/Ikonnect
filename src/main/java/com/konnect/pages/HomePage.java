@@ -1,6 +1,11 @@
 package com.konnect.pages;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -19,9 +24,11 @@ public class HomePage extends TestBase {
 		WebElement cloudlink;*/
 		//@CacheLookup
 		//@FindBy(id="mstLiKonnectTab")
-		@FindBy(xpath="/html/body/form/div[3]/aside/section/div[1]/ul/li[2]/a")
+		@FindBy(css=".fa-cloud")
+		@CacheLookup
+		//@FindBy(xpath="/html/body/form/div[3]/aside/section/div[1]/ul/li[2]/a")
 		WebElement leftcloudlink;
-		//@CacheLookup
+		
 		
 		@FindBy(id="mstLiSettings")
 		WebElement leftsettings;
@@ -35,8 +42,8 @@ public class HomePage extends TestBase {
 		//@FindBy(linkText = "#control-menu-tab")
 		//@FindBy(LinkText="//*[@class='fa fa-home']")
 		
-		// profile image at right side
-		@FindBy(id="imgusrProfileDP")
+
+		@FindBy(xpath="//img[@id='imgusrProfileDP']")
 		WebElement profileicon;
 		
 		//@FindBy(xpath="//*[@id=\"spngtkUserProfileName\"]")
@@ -46,6 +53,7 @@ public class HomePage extends TestBase {
 		// Logout
 		@FindBy(id="lnk")
 		WebElement signout;
+		//lnk
 		
 		@FindBy(xpath="/html/body/form/div[3]/aside/section/div[2]/div[2]/ul/li[2]/a")
 		WebElement Groups;
@@ -61,6 +69,14 @@ public class HomePage extends TestBase {
 		
 		@FindBy(id="grpMsttxtGrpDescr")
 		WebElement Groupdescription;
+		
+		
+		@FindBy(xpath="//*[@id=\"treeviewParentLi_3_M\"]/a/span")
+		@CacheLookup
+		WebElement Projects;
+		
+		@FindBy(xpath="//div[@id='control-quick-tab']//li[@id='treeviewParentLi_2_M']//following::span[contains(text(),'Konnections')]")
+		WebElement Konnections;
 		
 		//@FindBy()
 
@@ -89,12 +105,61 @@ public class HomePage extends TestBase {
 		public void cickonProfilepage() {
 			profileicon.click();
 		}*/
+		
+		
+		public LoginPage verifyprofileicon() {
+			profileicon.isDisplayed();
+			profileicon.click();
+			return new LoginPage();
+		}
+		
+
+		public LoginPage logout() {
+			profileicon.click();
+			signout.click();
+			return null;
+			
+		}
+		
 
 		public GroupsPage clickoncloudlink()
 		{
 			leftcloudlink.click();
 			return new GroupsPage();
 		}
+		
+		public void clickoncloudlink2()
+		{
+			leftcloudlink.click();
+			List<WebElement> alllinks =driver.findElements(By.cssSelector(".fa-cloud"));
+	        String a[]=new String[alllinks.size()];
+	        for(int i=0;i<alllinks.size();i++)
+	        {
+	            a[i]=alllinks.get(i).getText(); 
+	            if(a[i].startsWith("c"))
+	            {
+	                System.out.println("clicking on this link::"+driver.findElement(By.cssSelector(".fa-cloud")).getText());
+	                driver.findElement(By.cssSelector(".fa-cloud")).click();  
+
+	            }
+	            else
+	            {
+	                System.out.println("does not starts with c so not clicking");
+	            }
+	        }
+			
+			
+		}
+		
+		
+		public ProjectPage clickoncloudlink1()
+		{
+			
+			leftcloudlink.click();
+			return new ProjectPage();
+		}
+		
+		
 		
 		public GroupsPage clickongroups() {
 			Groups.click();
@@ -111,10 +176,13 @@ public class HomePage extends TestBase {
 		}
 		
 		
+		
+		
+		/*
 		public void Groupname() {
 			
 			Groupname.sendKeys("Seleniumgroup");
-		}
+		}*/
 		
 		//public boolean verifyCorrectUserName(){
 			//return userNameLabel.isDisplayed();
@@ -142,8 +210,14 @@ public class HomePage extends TestBase {
 			
 		//}
 		
-			
+
+		public ProjectPage clickonProjects() {
+			Projects.click();
+			return new ProjectPage();
+		}	
 	
-	
+		 public void clickonKonnections() {
+		    	Konnections.click();
+		    }
 
 }

@@ -61,9 +61,16 @@ public class ExtentReporterNG implements IReporter {
 
 				test.setStartedTime(getTime(result.getStartMillis()));
 				test.setEndedTime(getTime(result.getEndMillis()));
+				test.getDescription();
+				test.getRunStatus();
+				test.getStartedTime();
+				test.getEndedTime();
+				test.log(LogStatus.INFO,"Error Snapshot : "+ test.addScreenCapture("E:\\MavenprojectGTK\\KonnectPortal\\screenshots"));
+			
 
 				for (String group : result.getMethod().getGroups())
 					test.assignCategory(group);
+					
 
 				if (result.getThrowable() != null) {
 					test.log(status, result.getThrowable());

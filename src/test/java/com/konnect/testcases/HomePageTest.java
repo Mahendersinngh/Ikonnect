@@ -4,12 +4,11 @@
 package com.konnect.testcases;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.konnect.base.TestBase;
-import com.konnect.pages.Cloudpage;
 import com.konnect.pages.GroupsPage;
 import com.konnect.pages.HomePage;
 import com.konnect.pages.LoginPage;
@@ -35,8 +34,8 @@ public class HomePageTest extends TestBase {
 		//before each test case -- launch the browser and login
 		//@test -- execute test case
 		//after each test case -- close the browser
-	
-	@BeforeMethod
+	//@BeforeMethod
+	@BeforeClass
 	public void setup() {
 		initialization();
 		
@@ -44,14 +43,27 @@ public class HomePageTest extends TestBase {
 		groupspage= new GroupsPage();
 		loginPage= new LoginPage();
 		homePage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+		System.out.println("Login Sucessfull");
 		testUtil= new TestUtil();
 		//testUtil.switchToFrame();
 	}
 
 	@Test(priority=1)
 	public void verifyHomePageTitleTest(){
+	
+	try {
+		Thread.sleep(8000);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}	
 	String homePageTitle = homePage.verifyHomePageTitle();
 	Assert.assertEquals(homePageTitle, "GTK Content Portal","Home page title not matched");
+	System.out.println("Verified HomePage Title");
+	homePage.clickoncloudlink();
+	homePage.clickoncloudlink1();
+	System.out.println("Clicked on Cloud Icon to Loan and Display respective Links");
+	
 	}
 	
 	/*@Test(priority=2)
@@ -59,18 +71,19 @@ public class HomePageTest extends TestBase {
 		homePage.cickonProfilepage();
 	}*/
 	
-	@Test(priority=2)
+	/*@Test(priority=2)
 	public void clickonCloudpageTest() {
 		homePage.clickoncloudlink();
-		homePage.clickongroups();
+	}*/
+		//homePage.clickongroups();
 		//testUtil.switchToFrame();
 		//driver.switchTo().frame("GTKCntMstIframe");
-		testUtil.switchToFrame();
-		homePage.clickonAddnewGroup();
+		//testUtil.switchToFrame();
+		//homePage.clickonAddnewGroup();
 		//homePage.Groupname();
 		//groupspage=homePage.clickongroups();
 		//homePage.clickongroups();
-	}
+	//}
 	/*@Test(priority=3)
 	public void ClickonGroupsTest()  {
 		//clickonCloudpageTest();
@@ -96,7 +109,8 @@ public class HomePageTest extends TestBase {
 		//Assert.assertEquals(verifyusername, "Sagar Pachipala", "Username is not matched");
 	}
 */
-	@AfterMethod
+	//@AfterMethod
+	@AfterClass
 	public void tearDown(){
 	driver.quit();
 	

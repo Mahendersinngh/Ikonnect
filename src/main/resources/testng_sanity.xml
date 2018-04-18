@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="KonnectPortal Application">
+<suite name="Konnect Project Modification Test Suite" verbose="02"  thread-count="1" preserve-order="true"  allow-return-values="true">
 
 	<listeners>
 		<listener class-name="com.konnect.ExtentReportListener.ExtentReporterNG" />
 	</listeners>
 
-	<test name="Konnect Poprtal Test Cases">
+	<test name="Groups Creation"  verbose="2"  preserve-order="false" group-by-instances="false"  allow-return-values="true">
 		<classes>
-			<class name="com.konnect.testcases.LoginPageTest"></class>
-			<class name="com.konnect.testcases.HomePageTest"></class>
-			<!-- <class name="com.konnect.testcases."></class> -->
+			<!-- <class name="com.konnect.testcases.LoginPageTest"></class>
+			<class name="com.konnect.testcases.HomePageTest"></class> -->
+			<class name="com.konnect.testcases.GroupsPageTest"></class>
 
 		</classes>
 	</test>

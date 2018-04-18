@@ -3,10 +3,9 @@
  */
 package com.konnect.testcases;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.konnect.base.TestBase;
@@ -25,10 +24,8 @@ public class LoginPageTest extends TestBase  {
 	public LoginPageTest(){
 		super();
 	}
-	
-	
-	@BeforeMethod
-	
+	//@BeforeMethod
+	@BeforeClass
 	public void setUp() {
 		initialization();
 		loginPage = new LoginPage();	
@@ -42,28 +39,41 @@ public class LoginPageTest extends TestBase  {
 	}*/
 	
 	@Test(priority=1)
-	public void gtkLogoImageTest(){
+	public void GTKLogoImageTest(){
 		boolean flag = loginPage.validateGTKimage();
-		Assert.assertTrue(flag);
+		Assert.assertTrue(flag);	
 	}
 	
 	@Test(priority=2)
-	public void loginTest()
+	public void LoginTest()
 	{
 		//loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-	}
-	
-	public void Logout() {
+		/*boolean flag = loginPage.verifyprofileicon();
+		Assert.assertTrue(flag);*/
+		/*loginPage = homePage.verifyprofileicon();
+		loginPage = homePage.logout();
+		System.out.println("Logut sucesfull");*/
 		
 	}
 	
-	@AfterMethod
+	/*// Verify Profile
+	@Test(priority=3)
+	public void validateprofileiconTest() {
+		loginPage = homePage.verifyprofileicon();
+		
+	}*/
+	
+	// Logout
+	@Test(priority=4)
+	public void LogoutTest() {
+		loginPage = homePage.logout();
+	}
+	//@AfterMethod
+	@AfterClass
 	public void tearDown(){
 		driver.quit();
 	}
 	
-	
-		
 	
 }
