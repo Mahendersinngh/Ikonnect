@@ -105,8 +105,8 @@ public void setup() throws InterruptedException {
 	
 	@Test(priority=3)
 	public void SelectVijayUser() throws InterruptedException {
-		//konnectionpage.ClickonSunilUser();
-		konnectionpage.ClickonVijayUser();
+		konnectionpage.ClickonSunilUser();
+		//konnectionpage.ClickonVijayUser();
 		Thread.sleep(1000);
 	
 	  }	
