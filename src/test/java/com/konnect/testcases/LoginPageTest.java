@@ -26,9 +26,10 @@ public class LoginPageTest extends TestBase  {
 	}
 	//@BeforeMethod
 	@BeforeClass
-	public void setUp() {
+	public void setUp() throws InterruptedException {
 		initialization();
-		loginPage = new LoginPage();	
+		loginPage = new LoginPage();
+		
 	}
 	
 	//@Test(priority=2)
@@ -45,10 +46,11 @@ public class LoginPageTest extends TestBase  {
 	}
 	
 	@Test(priority=2)
-	public void LoginTest()
+	public void LoginTest() throws InterruptedException
 	{
 		//loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+		Thread.sleep(3000);
 		/*boolean flag = loginPage.verifyprofileicon();
 		Assert.assertTrue(flag);*/
 		/*loginPage = homePage.verifyprofileicon();
@@ -72,7 +74,7 @@ public class LoginPageTest extends TestBase  {
 	//@AfterMethod
 	@AfterClass
 	public void tearDown(){
-		driver.quit();
+		//driver.quit();
 	}
 	
 	

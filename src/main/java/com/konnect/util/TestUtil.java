@@ -40,12 +40,12 @@ public class TestUtil extends TestBase {
     static Sheet sheet;*/
     
     // Groups and Project Creation -- CREATION
-    public static String TESTDATA_SHEET_PATH = "E:\\MavenprojectGTK\\KonnectPortal\\src\\main\\java\\com\\konnect\\testdata\\Groups and Project Creation.xlsx";
+    public static String TESTDATA_SHEET_PATH = "E:\\MavenprojectTFS\\KonnectPortal\\src\\main\\java\\com\\konnect\\testdata\\Groups and Project Creation.xlsx";
     static Workbook book;
     static Sheet sheet;
    
     // Groups and Project  --- UPDATE
-    public static String TESTDATA_SHEET_PATH1 = "E:\\MavenprojectGTK\\KonnectPortal\\src\\main\\java\\com\\konnect\\testdata\\Groups and Project Update.xlsx";
+    public static String TESTDATA_SHEET_PATH1 = "E:\\MavenprojectTFS\\KonnectPortal\\src\\main\\java\\com\\konnect\\testdata\\Groups and Project Update.xlsx";
     static Workbook book1;
     static Sheet sheet1;
       

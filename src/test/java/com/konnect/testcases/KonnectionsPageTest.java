@@ -104,7 +104,7 @@ public void setup() throws InterruptedException {
 	   }
 	
 	@Test(priority=3)
-	public void SelectVijayUser() throws InterruptedException {
+	public void SelectUser() throws InterruptedException {
 		konnectionpage.ClickonSunilUser();
 		//konnectionpage.ClickonVijayUser();
 		Thread.sleep(1000);
@@ -152,17 +152,9 @@ public void setup() throws InterruptedException {
 	}
 	
 	@Test(priority=9)
-	public void NavigatetoAllKonnections() {
+	public void NavigatetoAllKonnections() throws InterruptedException {
 		konnectionpage.ClickonAllKonnections();
-	
-	  }	
-	
-	@Test(priority=10)
-	public void SelectAllAndKonnect() throws InterruptedException {
-		konnectionpage.selectAllUsersinAllKonnections();
-		Thread.sleep(1000);
-		konnectionpage.ClickonMyKonnections();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 	
 	  }	
 	
@@ -171,17 +163,54 @@ public void setup() throws InterruptedException {
 		       Object data[][] = TestUtil.getTestData(Konnections);
 		       return data;
 	   	 	}
+	// Searching User2 and selecting  
+	@Test(priority=11,dataProvider="KonnectionPage2")
+	public void SearchAnyoneuserinMyKonnections(String SearchUsers1,String SearchUsers2,String MyKonnectedRequestSentUser1,String MyKonnectedRequestSentUser2) throws InterruptedException{  
+		  konnectionpage.SearchUsers2(SearchUsers2);
+		  //konnectionpage.MyKonnectedRequestSentUser2(MyKonnectedRequestSentUser2);
+		  Thread.sleep(2000);
+		  konnectionpage.ClickonVijayUser();
+		  konnectionpage.ClickonKonnectButton();
+		  Thread.sleep(2000);
+		  konnectionpage.ClickonMyKonnections();
+		  
+		  
+		  
+	}
+	
+	
+	
+	
+	
+	/*@Test(priority=10)
+	public void SelectAllAndKonnect() throws InterruptedException {
+		konnectionpage.selectAllUsersinAllKonnections();
+		Thread.sleep(1000);
+		konnectionpage.ClickonMyKonnections();
+		Thread.sleep(2000);
+	
+	  }	
+	
+	
+	
+	
+	/*@DataProvider(name="KonnectionPage2")
+	public Object[][] getKonnectionselecAllTestdata(){
+		       Object data[][] = TestUtil.getTestData(Konnections);
+		       return data;
+	   	 	}
 	 
 	@Test(priority=11,dataProvider="KonnectionPage2")
 	public void SearchAnyoneuserinMyKonnections(String SearchUsers1,String SearchUsers2,String MyKonnectedRequestSentUser1,String MyKonnectedRequestSentUser2) throws InterruptedException{ 
-		  konnectionpage.MyKonnectedRequestSentUser1(MyKonnectedRequestSentUser2);
+		  konnectionpage.MyKonnectedRequestSentUser2(MyKonnectedRequestSentUser2);
 		  Thread.sleep(2000);
 	}
 	
 	@Test(priority=12)
 	public void DeleteRequestSentoneuser() throws InterruptedException {
 		konnectionpage.Mouseoveruser();
-	}
+		konnectionpage.VerifyRequestCancellation();
+	}*/
 	
 	
 	@Test(priority=11)

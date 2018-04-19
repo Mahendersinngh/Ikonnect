@@ -31,9 +31,12 @@
     			<artifactId>maven-surefire-plugin</artifactId>
     			<version>2.19.1</version>
 				<configuration>
+				<testFailureIgnore>true</testFailureIgnore>
+				<printSummary>true</printSummary>
 				
 					<suiteXmlFiles>
-						<suiteXmlFile>src\main\resources\testng_updateprojectdetails.xml</suiteXmlFile>
+						<!-- <suiteXmlFile>src\main\resources\testng_updateprojectdetails.xml</suiteXmlFile> -->
+						<suiteXmlFile>src/main/resources/testng_smoke.xml</suiteXmlFile>
 						<!-- <suiteXmlFile>${suiteXmlFile}</suiteXmlFile> -->
 						
 					</suiteXmlFiles>
@@ -45,9 +48,8 @@
 					</includes>
 					<!-- <parallel>classes</parallel>
           			<threadCount>6</threadCount> -->
-          			<!-- <testFailureIgnore>false</testFailureIgnore> -->
           			<!-- <runOrder>alphabetical</runOrder> -->
-          			<printSummary>true</printSummary>
+          			
           			
 				</configuration>
 			</plugin>
@@ -67,11 +69,10 @@
 					</execution>
 				</executions>
 			</plugin>
-			
 		<plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-failsafe-plugin</artifactId>
-        <version>2.21.0</version>
+        <version>2.19.1</version>
         <configuration>
                <reuseForks>true</reuseForks>
         </configuration>
@@ -106,7 +107,7 @@
                                 <htmlMessageFile>src/main/MailContent.html</htmlMessageFile>
                                 <receivers>
                                         <receiver>Mahender</receiver>
-                                        <receiver>mahenders@gtkonnect.com</receiver>
+                                        <receiver>mahenderd@gtkonnect.com</receiver>
                                 </receivers>
                                 <fileSets>
                                         <fileSet>
@@ -127,7 +128,7 @@
 	<plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-report-plugin</artifactId>
-            <version>2.21.0</version>
+            <version>2.19.1</version>
       </plugin>	 
 	<plugin>
 			<groupId>ch.fortysix</groupId>
@@ -147,13 +148,13 @@
 					<!-- From Email address -->
 					<from>dmahender8@gmail.com</from>
 					
-					<!--  Email subject -->
+					 <!-- Email subject -->
 					<subject>Test Automation Report</subject>
 					<body>Please find attached Automation Results for the day</body>
 					
 					<!-- Fail the build if the mail doesnt reach -->
-					<failonerror>true</failonerror>
-					
+					<!-- <failonerror>true</failonerror>
+					<executeIfTests>[passed|failed|passedOrFailed]</executeIfTests> -->
 					<!-- host -->
 					<mailhost>smtp.gmail.com</mailhost>
 					<!-- port of the host -->
@@ -173,7 +174,8 @@
 					<fileSets>
 					<fileSet>
 						<!-- Report directory Path -->
-						<directory>E:\MavenprojectGTK\KonnectPortal\target\surefire-reports</directory>
+						<!-- <directory>E:\MavenprojectGTK\KonnectPortal\target\surefire-reports</directory> -->
+						<directory>E:\MavenprojectTFS\KonnectPortal\target\surefire-reports</directory>
 						<includes>
 							<!-- Report file name -->
 							<include>emailable-report.html</include>
@@ -186,6 +188,98 @@
 				</execution>
 			</executions>
 		</plugin>	 
+
+
+
+
+
+
+<!-- OUT LOOK TRYIN TO SEND EMAIL REPORTS -->
+
+	<!-- <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-report-plugin</artifactId>
+            <version>2.19.1</version>
+      </plugin>	 
+	<plugin>
+			<groupId>ch.fortysix</groupId>
+			<artifactId>maven-postman-plugin</artifactId>
+			<version>0.1.6</version>
+			<executions>
+				<execution>
+				
+				<id>send a mail</id>
+				<phase>test</phase>
+				<goals>
+				<goal>send-mail</goal>
+				</goals>
+				<inherited>true</inherited>
+				
+				<configuration>
+					From Email address
+					<from>mahenderd@gtkonnect.com</from>
+					
+					 Email subject
+					<subject>Test Automation Report from OUTLOOK</subject>
+					<body>Please find attached Automation Results for the day</body>
+					
+					Fail the build if the mail doesnt reach
+					<failonerror>true</failonerror>
+					<executeIfTests>[passed|failed|passedOrFailed]</executeIfTests>
+					
+					host
+					<mailhost>smtp-mail.outlook.com</mailhost>
+					<mailhost>outlook.live.com</mailhost>
+					<mailhost>login.live.com</mailhost>
+					<mailhost>outlook.office.com</mailhost>
+					<mailhost>smtp.outlook.com</mailhost>
+					<mailhost>smtp.office365.com</mailhost>
+					
+					port of the host
+					<mailport>587</mailport>
+					<mailauth>true</mailauth>
+					<mailstarttls>false</mailstarttls>
+					<mailssl>true</mailssl>
+					<mailstarttls>true</mailstarttls>
+					<mailAltConfig>true</mailAltConfig>
+					
+					Email Authentication(USername and Password)
+					<mailuser>mahenderd@gtkonnect.com</mailuser>
+					<mailpassword>Dhoni@522</mailpassword>
+					
+					<receivers>
+						To Email address
+						<receiver>mahenderd@gtkonnect.com</receiver>
+					</receivers>
+					
+					<fileSets>
+					<fileSet>
+						Report directory Path
+						<directory>E:\MavenprojectGTK\KonnectPortal\target\surefire-reports</directory>
+						<directory>E:\MavenprojectTFS\KonnectPortal\target\surefire-reports</directory>
+						<includes>
+							Report file name
+							<include>emailable-report.html</include>
+						</includes>
+						Use Regular Expressions like **/*.html if you want all the html files to send
+						</fileSet>
+					</fileSets>				
+				
+				</configuration>
+				</execution>
+			</executions>
+		</plugin>	 
+
+ -->
+
+
+
+
+
+
+
+
+
 
 
 
@@ -271,7 +365,7 @@
       <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-report-plugin</artifactId>
-            <version>2.21.0</version>
+            <version>2.19.1</version>
       </plugin>
     </plugins>     
 	</reporting>

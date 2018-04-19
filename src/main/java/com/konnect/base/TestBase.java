@@ -47,16 +47,8 @@ import org.openqa.selenium.support.events.WebDriverEventListener;
 			//FileInputStream ip = new FileInputStream("C:\\Users\\mahenderd\\eclipse-workspace\\automationGT\\MavenGTKonnect\\src\\main\\java\\com\\gtkonnect\\config\\config.properties");
 			//prop.load(ip);
 			
-			FileInputStream ip = new FileInputStream("E:\\MavenprojectGTK\\KonnectPortal\\src\\main\\java\\com\\konnect\\config\\config.properties");
+			FileInputStream ip = new FileInputStream("E:\\MavenprojectTFS\\KonnectPortal\\src\\main\\java\\com\\konnect\\config\\config.properties");
 			prop.load(ip);
-			
-			
-			
-			
-			
-			
-			
-			
 			
 			
 		} 
@@ -72,13 +64,13 @@ import org.openqa.selenium.support.events.WebDriverEventListener;
 	{
 		//prop.getProperty("browser");
 		String browserName = prop.getProperty("browser");
-		if(browserName.equals("chrome")){
+		if(browserName.equals("Chromebrowser")){
 			System.out.println("Launching CHROME browser......");
 			System.setProperty("webdriver.chrome.driver", "C:\\Seleniumdrivers\\chromedriver32v26march18.exe");	
 			driver  = new ChromeDriver();
 		  }
 		
-		else if(browserName.equals("FF")){
+		else if(browserName.equals("Firefoxbrowser")){
 			System.out.println("Launching FIREFOX browser......");
 			System.setProperty("webdriver.gecko.driver", "C:\\Seleniumdrivers\\geckodriverx64.exe");	
 			driver = new FirefoxDriver();
