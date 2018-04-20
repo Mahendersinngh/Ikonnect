@@ -72,7 +72,7 @@ public class UpdateMyNotesPageTest extends TestBase{
 		return data;
 	}
 
-	@Test(priority=2,dataProvider="MyNoteUpdate",description= "***Added Notes Details Successfully..!!!***")
+	@Test(priority=2,dataProvider="MyNoteUpdate",description= "***Updated MyNotes Details Successfully..!!!***")
 	public void AddNewNotesTest(String Notes, String Source, String SorceNote, String UserNotes,String ExistingTag,String InputToCreateTag) throws InterruptedException {	
 		testUtil.switchToFrame();
 		Thread.sleep(4000);
