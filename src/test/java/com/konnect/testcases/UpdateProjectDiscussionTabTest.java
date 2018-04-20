@@ -66,7 +66,7 @@ public class UpdateProjectDiscussionTabTest extends TestBase {
 
    @DataProvider(name="ProjectsearchforDiscussion")
    public Object[][] getProjectsTestdata(){
-       Object data[][] = TestUtil.getTestData1(ProjectSheet);
+       Object data[][] = TestUtil.getTestDataUpdate(ProjectSheet);
        return data;
    }
     

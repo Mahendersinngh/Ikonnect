@@ -67,7 +67,7 @@ public class UpdateProjectPageTabTest extends TestBase  {
 	   
 	   @DataProvider(name="ProjectPage")
        public Object[][] getProjectsTabTestData(){
-           Object data[][] = TestUtil.getTestData1(ProjectSheet);
+           Object data[][] = TestUtil.getTestDataUpdate(ProjectSheet);
            return data;
        }
       
@@ -120,7 +120,7 @@ public class UpdateProjectPageTabTest extends TestBase  {
 	
 	  /*@DataProvider
       public Object[][] getProjectTestdata(){
-          Object data[][] = TestUtil.getTestData1(SheetName1);
+          Object data[][] = TestUtil.getTestDataUpdate(SheetName1);
           return data;
       }
 	  @DataProvider 

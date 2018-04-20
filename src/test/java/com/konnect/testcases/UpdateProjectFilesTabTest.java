@@ -63,7 +63,7 @@ public class UpdateProjectFilesTabTest extends TestBase {
 
    @DataProvider(name="ProjectPageProjectSearch")
    public Object[][] getProjectsTestdata(){
-       Object data[][] = TestUtil.getTestData1(ProjectSheet);
+       Object data[][] = TestUtil.getTestDataUpdate(ProjectSheet);
        return data;
    	 }
    @DataProvider  

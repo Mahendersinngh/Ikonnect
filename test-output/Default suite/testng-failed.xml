@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.konnect.testcases.KonnectionsPageTest">
+      <class name="com.konnect.testcases.UpdateMyNotesPageTest">
         <methods>
-          <include name="VerifyAllRequestSentUser"/>
+          <include name="teardown"/>
+          <include name="AddNewNotesTest" invocation-numbers="0"/>
           <include name="setup"/>
-          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.konnect.testcases.KonnectionsPageTest -->
+      </class> <!-- com.konnect.testcases.UpdateMyNotesPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

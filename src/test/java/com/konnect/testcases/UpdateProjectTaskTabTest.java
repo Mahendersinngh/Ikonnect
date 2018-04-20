@@ -73,7 +73,7 @@ public class UpdateProjectTaskTabTest extends TestBase {
 	
   @DataProvider(name="ProjectPageSearchTask")
   public Object[][] getProjectsTestdata(){
-      Object data[][] = TestUtil.getTestData1(ProjectSheet);
+      Object data[][] = TestUtil.getTestDataUpdate(ProjectSheet);
       return data;
   	}
   
@@ -103,7 +103,7 @@ public class UpdateProjectTaskTabTest extends TestBase {
  
   @DataProvider(name="ProjectTaskNoteLinksearch")
   public Object[][] getProjectsTaskTestdata(){
-      Object data[][] = TestUtil.getTestData1(ProjectTasksheet);
+      Object data[][] = TestUtil.getTestDataUpdate(ProjectTasksheet);
       return data;
   }
     

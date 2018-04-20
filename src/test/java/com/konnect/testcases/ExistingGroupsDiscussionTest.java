@@ -59,7 +59,7 @@ public class ExistingGroupsDiscussionTest extends TestBase {
 	
 	@DataProvider
 	public Object[][] getGroupsTestData(){
-		Object data[][] = TestUtil.getTestData(sheetName);
+		Object data[][] = TestUtil.getTestDataUpdate(sheetName);
 		return data;
 	}
 

@@ -31,9 +31,7 @@ public class TestUtil extends TestBase {
     public static long PAGE_LOAD_TIMEOUT =30;
     public static long IMPLICIT_WAIT = 30;
     public static long SCRIPT_WAIT = 30;
-      
-    
-    
+   
     // Groups and Project Update
     /*public static String TESTDATA_SHEET_PATH = "E:\\MavenprojectGTK\\KonnectPortal\\src\\main\\java\\com\\konnect\\testdata\\Groups and Project Update.xlsx";
     static Workbook book;
@@ -72,7 +70,6 @@ public class TestUtil extends TestBase {
       
     public void switchToDefaultinnerFrame()
     {
-        
     	//WebElement frame = driver.findElement(By.xpath("//div[@class='Tags']"));
     	WebElement frame = driver.findElement(By.xpath("//div[@id='comments']//div[@class='col-md-12 no-padding']"));
         
@@ -84,8 +81,6 @@ public class TestUtil extends TestBase {
     }
     public void switchToParentFrame()
     {
-        
-    	
     	driver.switchTo().parentFrame();
  	    //driver.switchTo().defaultContent();
     	
@@ -121,7 +116,7 @@ public class TestUtil extends TestBase {
     }
         
         
-        public static Object[][] getTestData1(String sheetName1) {
+        public static Object[][] getTestDataUpdate(String sheetName1) {
             FileInputStream file = null;
             try {
                 file = new FileInputStream(TESTDATA_SHEET_PATH1);

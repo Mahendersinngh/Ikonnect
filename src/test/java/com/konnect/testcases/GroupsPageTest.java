@@ -69,7 +69,7 @@ public class GroupsPageTest extends TestBase {
 	
 	@DataProvider(name="GroupsName")
 	public Object[][] getGroupsTestData(){
-		Object data[][] = TestUtil.getTestData1(sheetName);
+		Object data[][] = TestUtil.getTestData(sheetName);
 		return data;
 	}
 	@Test(priority=3, dataProvider="GroupsName")

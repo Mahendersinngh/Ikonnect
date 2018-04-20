@@ -70,7 +70,7 @@ public class UpdateProjectLinksTabTest extends TestBase {
 
    @DataProvider(name="ProjectPageSearch")
    public Object[][] getProjectsTestdata(){
-       Object data[][] = TestUtil.getTestData1(ProjectSheet);
+       Object data[][] = TestUtil.getTestDataUpdate(ProjectSheet);
        return data;
    	 }
    @DataProvider  
@@ -95,7 +95,7 @@ public class UpdateProjectLinksTabTest extends TestBase {
    //Skipping Not required
  /*  @DataProvider
    public Object[][] getProjectslinkscreateTestdata(){
-       Object data[][] = TestUtil.getTestData1(sheetName);
+       Object data[][] = TestUtil.getTestDataUpdate(sheetName);
        return data;
    }
    @DataProvider  
@@ -116,7 +116,7 @@ public class UpdateProjectLinksTabTest extends TestBase {
    
 	 @DataProvider(name="ProjectLinksearch")
 	 public Object[][] getProjectlinkTestdata(){
-	       Object data[][] = TestUtil.getTestData1(ProjectLinkSheet);
+	       Object data[][] = TestUtil.getTestDataUpdate(ProjectLinkSheet);
 	       return data;
 	   	}
 	   

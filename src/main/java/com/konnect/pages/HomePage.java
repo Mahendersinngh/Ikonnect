@@ -78,6 +78,14 @@ public class HomePage extends TestBase {
 		@FindBy(xpath="//div[@id='control-quick-tab']//li[@id='treeviewParentLi_2_M']//following::span[contains(text(),'Konnections')]")
 		WebElement Konnections;
 		
+		
+
+		@FindBy(xpath="//*[@id=\"treeviewParentLi_4_M\"]/a/span")
+		WebElement MyNotes;
+		
+		
+		
+		
 		//@FindBy()
 
 		// Initializing the Page Objects:
@@ -209,6 +217,10 @@ public class HomePage extends TestBase {
 			//newContactLink.click();
 			
 		//}
+		
+		public void ClickonMyNotes() {
+			MyNotes.click();
+		}
 		
 
 		public ProjectPage clickonProjects() {

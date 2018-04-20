@@ -69,7 +69,7 @@ public class UpdateProjectNotesTabTest extends TestBase {
    
    @DataProvider(name="ProjectNote")
    public Object[][] getProjectsTestdata(){
-	       Object data[][] = TestUtil.getTestData1(ProjectSheet);
+	       Object data[][] = TestUtil.getTestDataUpdate(ProjectSheet);
 	       return data;
    	 	}
  
@@ -98,7 +98,7 @@ public class UpdateProjectNotesTabTest extends TestBase {
 		
 	@DataProvider(name="Note")
 	public Object[][] getProjectNotesTestdata(){
-		 Object data[][] = TestUtil.getTestData1(ProjectNotes);
+		 Object data[][] = TestUtil.getTestDataUpdate(ProjectNotes);
 		 return data;
 	   }
 	
