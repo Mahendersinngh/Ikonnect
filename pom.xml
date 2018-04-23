@@ -5,6 +5,8 @@
   <groupId>GTKMaven</groupId>
   <artifactId>KonnectPortal</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  
   <packaging>jar</packaging>
 
   <name>KonnectPortal</name>
@@ -146,11 +148,24 @@
 				
 				<configuration>
 					<!-- From Email address -->
-					<from>dmahender8@gmail.com</from>
+					<from>mahendergtk@gmail.com</from>
 					
 					 <!-- Email subject -->
 					<subject>Test Automation Report</subject>
-					<body>Please find attached Automation Results for the day</body>
+					<!-- <body>Please find attached Automation Results for the day</body> -->
+					
+					<htmlMessage>
+					
+                        <![CDATA[<p>Hi,</p>]]>
+                        
+                        <![CDATA[<body>Please find attached Automation Results for the day</body>]]>
+                        
+                        
+                        <![CDATA[<p>Regards,</p>]]> 
+                        <![CDATA[<p>Mahender Singh</p>]]>
+                   	
+                   	</htmlMessage>
+                   	
 					
 					<!-- Fail the build if the mail doesnt reach -->
 					<!-- <failonerror>true</failonerror>
@@ -163,8 +178,8 @@
 					<mailAltConfig>true</mailAltConfig>
 					
 					<!-- Email Authentication(USername and Password) -->
-					<mailuser>dmahender8@gmail.com</mailuser>
-					<mailpassword>dhoni522</mailpassword>
+					<mailuser>mahendergtk@gmail.com</mailuser>
+					<mailpassword>gtk@2018</mailpassword>
 					
 					<receivers>
 						<!-- To Email address -->
@@ -179,6 +194,7 @@
 						<includes>
 							<!-- Report file name -->
 							<include>emailable-report.html</include>
+							<!-- <include>Extent.html</include> -->
 						</includes>
 						<!-- Use Regular Expressions like **/*.html if you want all the html files to send -->
 						</fileSet>

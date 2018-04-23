@@ -3,6 +3,7 @@ package com.konnect.pages;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -79,11 +80,22 @@ public class HomePage extends TestBase {
 		WebElement Konnections;
 		
 		
-
+		//Click on MyNotes Tab
 		@FindBy(xpath="//*[@id=\"treeviewParentLi_4_M\"]/a/span")
 		WebElement MyNotes;
 		
+		//Click on MyNotes Tab
+		@FindBy(xpath = "//li[@id='treeviewParentLi_4_M']")
+		WebElement MyNoteslink;
+
+	//Click on MyFiles tab.
+		@FindBy(xpath="//li[@id='treeviewParentLi_11_M']")
+		//@FindBy(xpath="//div[@id='control-quick-tab']//following::ul[@class='sidebar-menu']//following::span[contains(text(),'My Files')]")
+		WebElement MyFilespagelink;
 		
+	//Click on Chat Tab.
+		@FindBy(xpath="//li[@id='treeviewParentLi_10_M']")
+		WebElement ChatLink;
 		
 		
 		//@FindBy()
@@ -184,40 +196,6 @@ public class HomePage extends TestBase {
 		}
 		
 		
-		
-		
-		/*
-		public void Groupname() {
-			
-			Groupname.sendKeys("Seleniumgroup");
-		}*/
-		
-		//public boolean verifyCorrectUserName(){
-			//return userNameLabel.isDisplayed();
-		//}
-		
-		//public ContactsPage clickOnContactsLink(){
-			//contactsLink.click();
-			//return new ContactsPage();
-		//}
-		
-		//public DealsPage clickOnDealsLink(){
-			//dealsLink.click();
-			//return new DealsPage();
-		//}
-		
-		//public TasksPage clickOnTasksLink(){
-			//tasksLink.click();
-			//return new TasksPage();
-		//}
-		
-		//public void clickOnNewContactLink(){
-			//Actions action = new Actions(driver);
-			//action.moveToElement(contactsLink).build().perform();
-			//newContactLink.click();
-			
-		//}
-		
 		public void ClickonMyNotes() {
 			MyNotes.click();
 		}
@@ -228,6 +206,38 @@ public class HomePage extends TestBase {
 			return new ProjectPage();
 		}	
 	
+	
+		//click on MyFilesTab
+		public MyFilesPage MyFilesTab() {
+			MyFilespagelink.click();
+			return new MyFilesPage();
+		}
+		
+	//Click on Chats Tab
+		public ChatPage ChatsTab() {
+			ChatLink.click();
+			return new ChatPage();
+		}
+		
+	/*//Click on My Tasks Tab.	
+		public MyTasksPage MyTaskstab() {
+			WebElement ele = driver.findElement(By.xpath("//*[@id='treeviewParentLi_13_M']/a"));
+		    JavascriptExecutor executor = (JavascriptExecutor)driver;
+		    executor.executeScript("arguments[0].click();", ele);    
+		    return new MyTasksPage();
+		}*/
+		
+	//Click on My Links tab	
+		public MyLinkPage MyLinkstab() {
+			WebElement ele = driver.findElement(By.xpath("//*[@id='treeviewParentLi_12_M']/a"));
+		    JavascriptExecutor executor = (JavascriptExecutor)driver;
+		    executor.executeScript("arguments[0].click();", ele);    
+		    return new MyLinkPage();
+		}
+		
+		
+		
+		
 		 public void clickonKonnections() {
 		    	Konnections.click();
 		    }

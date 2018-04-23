@@ -86,6 +86,15 @@ public class TestUtil extends TestBase {
     	
     	//driver.switchTo().defaultContent();
     }  
+    // ChatFrame
+    public void SwitchToChatFrame() {
+		driver.switchTo().frame("GTKChatIframe");
+	}
+    
+    
+    public void SwitchToFrameofTextinChat() {
+		driver.switchTo().frame(0);
+	}
     
     public static Object[][] getTestData(String sheetName) {
         FileInputStream file = null;
