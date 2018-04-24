@@ -43,7 +43,7 @@ import org.openqa.selenium.support.events.WebDriverEventListener;
 			//FileInputStream ip = new FileInputStream(System.getProperty("C:\\Users\\mahenderd\\eclipse-workspace\\automationGT\\MavenGTKonnect\\src\\main\\java\\com\\gtkonnect\\config"));
 			//prop.load(ip);
 			//FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\com\\gtkonnect\\config\\config.properties");
-			// From GT
+			// From GT test
 			//FileInputStream ip = new FileInputStream("C:\\Users\\mahenderd\\eclipse-workspace\\automationGT\\MavenGTKonnect\\src\\main\\java\\com\\gtkonnect\\config\\config.properties");
 			//prop.load(ip);
 			
