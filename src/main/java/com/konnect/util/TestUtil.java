@@ -22,7 +22,7 @@ import org.openqa.selenium.WebElement;
 import com.konnect.base.TestBase;
   
 /**
- * @author mahenderd
+ * @author mahenderd 
  *
  */
 public class TestUtil extends TestBase {
@@ -32,7 +32,7 @@ public class TestUtil extends TestBase {
     public static long IMPLICIT_WAIT = 30;
     public static long SCRIPT_WAIT = 30;
    
-    // Groups and Project Update
+    // Groups and Project Update Mahi from Lap
     /*public static String TESTDATA_SHEET_PATH = "E:\\MavenprojectGTK\\KonnectPortal\\src\\main\\java\\com\\konnect\\testdata\\Groups and Project Update.xlsx";
     static Workbook book;
     static Sheet sheet;*/
