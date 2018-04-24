@@ -66,7 +66,7 @@ import org.openqa.selenium.support.events.WebDriverEventListener;
 		String browserName = prop.getProperty("browser");
 		if(browserName.equals("Chromebrowser")){
 			System.out.println("Launching CHROME browser......");
-			System.setProperty("webdriver.chrome.driver", "C:\\Seleniumdrivers\\chromedriver32v26march18.exe");	
+			System.setProperty("webdriver.chrome.driver", "E:\\MavenprojectTFS\\KonnectPortal\\src\\main\\webdrivers\\chromedriver32v26march18.exe");	
 			driver  = new ChromeDriver();
 		  }
 		

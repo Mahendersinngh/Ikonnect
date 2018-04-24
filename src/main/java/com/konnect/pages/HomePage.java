@@ -219,13 +219,13 @@ public class HomePage extends TestBase {
 			return new ChatPage();
 		}
 		
-	/*//Click on My Tasks Tab.	
+	//Click on My Tasks Tab.	
 		public MyTasksPage MyTaskstab() {
 			WebElement ele = driver.findElement(By.xpath("//*[@id='treeviewParentLi_13_M']/a"));
 		    JavascriptExecutor executor = (JavascriptExecutor)driver;
 		    executor.executeScript("arguments[0].click();", ele);    
 		    return new MyTasksPage();
-		}*/
+		}
 		
 	//Click on My Links tab	
 		public MyLinkPage MyLinkstab() {
