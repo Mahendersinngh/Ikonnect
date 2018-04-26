@@ -40,12 +40,7 @@ import org.openqa.selenium.support.events.WebDriverEventListener;
 	{
 		try {
 			prop = new Properties();
-			//FileInputStream ip = new FileInputStream(System.getProperty("C:\\Users\\mahenderd\\eclipse-workspace\\automationGT\\MavenGTKonnect\\src\\main\\java\\com\\gtkonnect\\config"));
-			//prop.load(ip);
-			//FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\com\\gtkonnect\\config\\config.properties");
-			// From GT test
-			//FileInputStream ip = new FileInputStream("C:\\Users\\mahenderd\\eclipse-workspace\\automationGT\\MavenGTKonnect\\src\\main\\java\\com\\gtkonnect\\config\\config.properties");
-			//prop.load(ip);
+			
 			
 			FileInputStream ip = new FileInputStream("E:\\MavenprojectTFS\\KonnectPortal\\src\\main\\java\\com\\konnect\\config\\config.properties");
 			prop.load(ip);
@@ -72,19 +67,19 @@ import org.openqa.selenium.support.events.WebDriverEventListener;
 		
 		else if(browserName.equals("Firefoxbrowser")){
 			System.out.println("Launching FIREFOX browser......");
-			System.setProperty("webdriver.gecko.driver", "C:\\Seleniumdrivers\\geckodriverx64.exe");	
+			System.setProperty("webdriver.gecko.driver", "E:\\MavenprojectTFS\\KonnectPortal\\src\\main\\webdrivers\\geckodriverx64.exe");	
 			driver = new FirefoxDriver();
 		  }
 		
 		else if(browserName.equals("IEbrowser")){
 			System.out.println("Launching INTERNET EXPLORER browser.....");
-			System.setProperty("webdriver.ie.driver", "C:\\Seleniumdrivers\\IEDriverServerx32bit.exe");
+			System.setProperty("webdriver.ie.driver", "E:\\MavenprojectTFS\\KonnectPortal\\src\\main\\webdrivers\\IEDriverServerx32bit.exe");
 			driver= new InternetExplorerDriver();
 		  }
 		
 		else if(browserName.equals("Edge")){
 			System.out.println("Launching MICROSOFT EDGE browser.....");
-			System.setProperty("webdriver.edge.driver", "C:\\Seleniumdrivers\\MicrosoftWebDriver.exe");
+			System.setProperty("webdriver.edge.driver", "E:\\MavenprojectTFS\\KonnectPortal\\src\\main\\webdrivers\\MicrosoftWebDriver.exe");
 			driver = new EdgeDriver();
 		  }
 		
