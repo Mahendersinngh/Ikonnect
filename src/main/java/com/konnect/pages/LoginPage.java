@@ -32,13 +32,7 @@ import com.konnect.util.WebEventListener;
  */
 public class LoginPage extends TestBase {
 	
-	 	/*public static WebDriver driver;
-		public static Properties prop;
-		public static EventFiringWebDriver e_driver;
-		public static WebDriverEventListener eventListener;
-		public static TestUtil testUtil;
-		String Konnections = "Logins";*/
-	//Page Factory - OR:
+	 //Page Factory Objects -- Elements
 			@FindBy(id="txtUsrEmail")
 			WebElement username;
 			
@@ -159,7 +153,7 @@ public class LoginPage extends TestBase {
 		/*	public boolean verifyprofileicon() {
 				return profileicon.isDisplayed();
 			}*/
-/*
+			/*
 			public void logout() {
 				signout.click();
 			}*/

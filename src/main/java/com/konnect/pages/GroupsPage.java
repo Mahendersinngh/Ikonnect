@@ -35,8 +35,6 @@ public class GroupsPage extends TestBase {
 	WebElement signout;
 	//lnk
 	
-	
-	
 	@FindBy(xpath="/html/body/form/div[3]/aside/section/div[2]/div[2]/ul/li[2]/a")
 	WebElement Groups;
 
@@ -220,15 +218,12 @@ public class GroupsPage extends TestBase {
 	
 	
 	
-	
-	
-	
-	
-	
-	
 	public GroupsPage() {
 		PageFactory.initElements(driver, this);
 	}
+	
+	
+	
 	
 
 /*public GroupsPage clickonAddnewGroup(){

@@ -347,7 +347,7 @@ public class ProjectPage extends TestBase {
         WebElement DiscussionFileBrowsebutton;
           
           
-          
+          // inner frame at discusion chats
         ////body[@autocorrect='off' and @contenteditable='true']
         // xpath = //div[@class='cmntDrpZone']/div/div/div/div/input
         //@FindBy(xpath="//*[@id=\"comments\"]/div/table/tbody/tr[2]/td/iframe")
@@ -366,22 +366,7 @@ public class ProjectPage extends TestBase {
         @FindBy(css="#S0")
         WebElement DiscussionPostButton;
           
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
+       
           
         // Select Project Task TAb
         
@@ -581,8 +566,6 @@ public class ProjectPage extends TestBase {
       
         public ProjectPage clickonAddnewProject(){
               
-            //driver.switchTo().frame("window_frame");
-            //driver.switchTo().frame("GTKCntMstIframe");
             ProjectsAddNew.click();
             return new ProjectPage();
         }
@@ -617,7 +600,7 @@ public class ProjectPage extends TestBase {
         List<WebElement> rows=  datepicker.findElements(By.tagName("tr"));  
         List<WebElement> columns= datepicker.findElements(By.tagName("td"));
           
-        // Not Working for in both FF and Chrome
+        // Not Working  in both FF and Chrome
        // datepicker.findElement(By.xpath("//a[@class='ui-state-default ui-state-highlight']")).click();
           
         // working for FF
@@ -1224,27 +1207,7 @@ public class ProjectPage extends TestBase {
     	 
       }
           
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
+     
           
         // Project TASK
         public void ClickonProjectTaskTab() {
