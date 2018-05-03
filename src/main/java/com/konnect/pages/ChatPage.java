@@ -22,7 +22,7 @@ import com.konnect.base.TestBase;
 public class ChatPage extends TestBase {
 
 
-	//Click on search Chat
+	//Click on search Chat edit tester
 		@FindBy(xpath="//input[@id='txtSrchChatPeople']")
 		WebElement SearchPeopleinChat;
 		
